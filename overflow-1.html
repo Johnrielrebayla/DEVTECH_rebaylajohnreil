@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow Scroll with Long Message</title>
+    
+    <style>
+    .scroll-box {
+        width: 150px;
+        height: 100px;
+        border: 2px solid #333;
+        padding: 10px;
+        overflow: scroll; 
+        background-color: #fefefe;
+    }
+    .long-message {
+        width: 500px; 
+        white-space: nowrap; 
+    }
+    </style>
+    
+</head>
+<body>
+    <h1>Overflow Scroll with Short-Message</h1>
+
+    <div class="scroll-box">
+    <div class="short-message">
+        
+        This is a very long message that doesn't fit in the box.
+        It forces both horizontal and vertical scrollbars to appear.
+        You can scroll through the message to read it fully.
+        The message is much wider than the container, 
+        which triggers horizontal scrolling.
+        Additionally, the message may exceed the height of the box, 
+        triggering vertical scrolling.
+        Scrollbars allow you to view all the text content, 
+        which keeps going and going without wrapping to the next line,
+        so you have to scroll horizontally as well as vertically!.
+    </div>
+</div>  
+</body>
+</html>
