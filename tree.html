@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tree Animation</title>
+  <style>
+    /* Reset margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #87CEEB; /* Light blue sky */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Prevents scrolling */
+      position: relative;
+    }
+
+    /* Tree container */
+    .tree {
+      position: relative;
+      width: 200px;
+      height: 500px;
+      /* Position at the center of the screen */
+    }
+
+    /* Tree trunk styling */
+    .trunk {
+      width: 100px;
+      height: 0;
+      background-color: #8B4513; /* Brown color */
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: growTrunk 2s ease-out forwards;
+    }
+
+    /* Leaves styling */
+    .leaf {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      background-color: #228B22; /* Green color */
+      border-radius: 50%;
+      opacity: 0;
+      animation: growLeaves 8s ease-out forwards;
+    }
+
+    /* Position of leaves on the tree */
+    .leaf1 {
+      bottom: 150px;
+      left: 20%;
+      animation-delay: 4s;
+    }
+    .leaf2 {
+      bottom: 300px;
+      left: 30%;
+      animation-delay: 3.5s;
+    }
+    .leaf3 {
+      bottom: 150px;
+      right: 50%;
+      animation-delay: 4s;
+    }
+    .leaf4 {
+      bottom: 300px;
+      right: 30%;
+      animation-delay: 5,s;
+    }
+
+    /* Trunk growing animation */
+    @keyframes growTrunk {
+      
+      100% {
+        height: 400px;
+      }
+    }
+
+    /* Leaves growing animation */
+    @keyframes growLeaves {
+      
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tree">
+    <div class="trunk"></div>
+    <div class="leaf leaf1"></div>
+    <div class="leaf leaf2"></div>
+    <div class="leaf leaf3"></div>
+    <div class="leaf leaf4"></div>
+  </div>
+</body>
+</html>
